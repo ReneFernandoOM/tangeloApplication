@@ -3,7 +3,7 @@ import hashlib
 from typing import List, Dict, Tuple
 
 from config import API_URL, API_RESOURCE
-from errors import HandledError
+from errors import ExpectedError
 
 def get_all_countries() -> List:
     api_response = requests.get(f"{API_URL}/{API_RESOURCE}")
@@ -12,7 +12,7 @@ def get_all_countries() -> List:
         all_countries = api_response.json()
         return all_countries
 
-    raise HandledError('API is not responding as expected')
+    raise ExpectedError('API is not responding as expected')
 
 def get_country_info(country: Dict) -> Tuple[str, str, List]:
     country_name_info = country.get('name', {})

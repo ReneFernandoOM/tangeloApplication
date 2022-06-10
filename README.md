@@ -55,9 +55,10 @@ Primeramente, será necesario clonar el repositorio y situarse sobre esa carpeta
 git clone https://github.com/ReneFernandoOM/tangeloApplication.git
 cd tangeloApplication
 ```
-Posteriormente, crear un ambiente virtual e instalar las dependencias:
+Posteriormente, crear un ambiente virtual, activarlo e instalar las dependencias:
 ```
 python -m venv .venv
+source .venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
